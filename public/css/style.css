@@ -1,0 +1,155 @@
+/* Reset basic styling for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up the body to center the content in a column */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    flex-direction: column;   /* Stack elements vertically */
+    min-height: 100vh;        /* Ensure the body takes up full viewport height */
+    padding: 20px;
+    text-align: center;       /* Align text to center */
+}
+
+/* Wrapper for centering the content */
+.main-container {
+    width: 100%;
+    max-width: 600px; /* Limit the width for larger screens */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for the todo list */
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Subtitles */
+h2 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Style the Todo items list */
+.todoItems {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Style for individual todo item */
+.item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Completed tasks should be styled differently */
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Style the delete icon (trash) */
+.item .fa-trash {
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+/* Change trash icon color on hover */
+.item .fa-trash:hover {
+    color: #cc0000;
+}
+
+/* Style the form inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-top: 30px;
+}
+
+/* Input for adding new todo */
+form input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+form input[type="text"]:focus {
+    border-color: #5b9bd5;
+    outline: none;
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    padding: 10px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+form input[type="submit"]:hover {
+    background-color: #4a8ac2;
+}
+
+/* Responsive design: make the form and list more mobile-friendly */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .main-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .todoItems {
+        padding-left: 15px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    form input[type="text"] {
+        font-size: 14px;
+    }
+
+    form input[type="submit"] {
+        font-size: 14px;
+    }
+}
