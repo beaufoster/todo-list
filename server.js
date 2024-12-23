@@ -14,7 +14,7 @@ MongoClient.connect(dbConnectionStr)
         console.log(`Connected to ${dbName} Database`)
         db = client.db(dbName)
     })
-
+// this is a test
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
